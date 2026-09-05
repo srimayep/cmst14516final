@@ -180,3 +180,45 @@ figcaption .cap-title { display: block; font-weight: 600; margin-bottom: 4px; }
   .tile:hover .tile__media,
   .tile:focus-visible .tile__media { transform: none; }
 }
+/* ---------- Navigation bar ---------- */
+.nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 22px clamp(20px, 5vw, 56px);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.nav__brand {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav__links { display: flex; gap: 22px; }
+.nav__links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.nav__links a:hover { color: var(--ink); }
+.nav__links a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 2px;
+}
+
+/* ---------- Reading text (About page) ---------- */
+.prose { max-width: 64ch; }
+.prose p { font-size: 1.1rem; margin: 0 0 1.1em; }
+.prose p:last-child { margin-bottom: 0; }
+.prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose a:hover { color: var(--ink-soft); }
